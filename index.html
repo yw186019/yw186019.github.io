@@ -121,18 +121,41 @@
                     \ (backslash)   end (as in x(2:end-1))
             </pre>
 
+            
             <pre>
+            <b>Start Matlab</b>
             To start matlab, simply type Matlab at the Unix prompt. Matlab should then
             start, and you get the Matlab prompt, >>.
 
             The most important commands in Matlab are:
-            • help      --The command gives you help inside Matlab.       1
+            • help      --The command gives you help inside Matlab.
             • helpwin   --The command gives you a separate window with the help texts
             • helpdesk  --The command starts Netscape and gives you access to the extensive HTML help that comes with Matlab.
 
-                If you type in help helpdesk at the Matlab prompt, you get:
-                    HELPDESK Comprehensive hypertext documentation and troubleshooting.
-                    HELPDESK loads the main MATLAB Help Desk page into the Web browser.
+            If you type in help helpdesk at the Matlab prompt, you get:
+            HELPDESK Comprehensive hypertext documentation and troubleshooting.
+            HELPDESK loads the main MATLAB Help Desk page into the Web browser.
+
+            <b>Sin</b>
+
+            To make a graph of y = sin(t) on the interval t = 0 to t =
+            10 we do the following:
+
+            &gt;&gt; t = 0:.3:10;
+            &gt;&gt; y = sin(t);
+            &gt;&gt; plot(t,y)
+
+            Here is the result:
+
+            <IMG ALIGN=top SRC="images/sine.gif">
+
+            The command <TT> t = 0:.3:10;</TT> defines a vector with
+            components ranging from 0 to 10 in steps of 0.3.  
+            The <TT> y = sin(t);</TT> defines a vector whose components are sin(0),
+            sin(0.3), sin(0.6), etc.  Finally, <TT> plot(t,y)</TT> use
+            the vector of t and y values to construct the graph.
+
+
             </pre>
         </li>
         <li>
