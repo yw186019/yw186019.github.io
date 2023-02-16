@@ -268,8 +268,8 @@
             
 
             <b>The most common mistake in Matlab </b>
-                <b style="color:Tomato;">Confusing row and column vectors!!</b> 
-                <a href="https://www.tutorialspoint.com/matlab/matlab_vectors.htm">Row or Column Vectors in Matlab</a>
+            <b style="color:Tomato;">Confusing row and column vectors!!</b> 
+            <a href="https://www.tutorialspoint.com/matlab/matlab_vectors.htm">Row or Column Vectors in Matlab</a>
 
                 We normally think of a vector as just a vector, but Matlab thinks of it as a matrix. 
 
@@ -354,9 +354,9 @@
 
 
 </pre>
-        <a href="#top">           
-            <i class="fa-solid fa-arrow-up">Back to top</i>
-        </a>
+            <a href="#top">
+                <i class="fa-solid fa-arrow-up">Back to top</i>
+            </a>
         </li>
         <li>
             <h4>
@@ -381,17 +381,127 @@
                 <A NAME="SampleQ">
                     Sample Questions
                 </A>
-            </h4>           
+            </h4>
+            <pre>
+                1. Generate a plot of the function sin on the interval [-1, 1] with an appropriate title. Turn in the figure together 
+                with the commands you used to generate the figure.
+        
+            <b>Answer:</b>
+                    
+                    >> t=-1:.2:1;
+                    >> plot(t,sin(t));                   
+                    >> xlabel('t');
+                    >> ylabel('sin(t)');
+                    >> title ('y=sin(t)');
+                    % generate pdf file for the figure
+                    >> print -dpdf myfirstgraph.pdf
+                    >> print -dps myfirstgraph.ps
+
+
+                2. Find the solution to the following 20-by-20 system of equations. Turn in
+                    your code and the output.
+            <IMG ALIGN=top SRC="images/Q2.png">
+           
+                    [Note: All entries in the matrix not explicitly mentioned are meant to be
+                    zero].
+
+            <b>Answer:</b>
+
+                       >> A=ones(20,20);
+                       >> B=[17;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0];
+                       >>  for r=1:19
+                            A(r,20)=0
+                       >> end
+                       >> x=A\B
+                        Warning: Matrix is singular to working precision.  
+
+                        x =
+
+                           NaN
+                           NaN
+                           NaN
+                           NaN
+                           NaN
+                           NaN
+                           NaN
+                           NaN
+                           NaN
+                           NaN
+                           NaN
+                           NaN
+                           NaN
+                           NaN
+                           NaN
+                           NaN
+                           NaN
+                           NaN
+                          -Inf
+                           -17
+
+                3. Create a Matlab function called ssolve that:
+                    (a) Accepts three parameters, a, b, and n, in that order.
+                    (b) Returns the solution to the following n by n system:
+            <IMG ALIGN=top SRC="images/Q3.png">
+                    as a column vector.
+                    [Note: All entries in the matrix not explicitly mentioned are meant to be
+                    zero].
+
+            <b>Answer:</b>
+
+
+                        function solution=ssolve(a,b,n)
+                        A=ones(n,n);
+                        B=ones(n,1);
+                        for r = 2:n
+                            B(r) = r;
+                        end
+                        B(n-1)=0;
+                        A(1,2)=a;
+                        A(20,1)=b;
+                        A(20,2)=b;
+                        A(20,20)=b;  
+                        % solution=A\B;    this returns Warning: Matrix is singular to working precision.                        
+                        solution=B\A;
+
+                4. Turn in a printout of the function ssolve and plots of the vectors
+                    (a) ssolve(10, 0.1, 30)
+                    (b) ssolve(2, -0.05, 50)
+                    with the appropriate titles. Also turn in the code that generated these
+                    figures. 
+                    
+
+            <b>Answer:</b>
+
+                    (a)
+
+                    >> x=ssolve(10,0.1,30);
+                    >> plot(x);
+                    >> xlabel('x');
+                    >> ylabel('ssolve(10,0.1,30)');
+                    >> title('graph of ssolve(10,0.1,30)');
+                    >> print -dps ssolve-30.ps
+
+                    (b)
+                    >> x=ssolve(2, -0.05, 50);
+                    >> plot(x);
+                    >> xlabel('x');
+                    >> ylabel('ssolve(10,0.1,30)');
+                    >> title('graph of ssolve(10,0.1,30)');
+                    >> print -dps ssolve-50.ps
+
+            </pre>
+           
 
         </li>
     </ul>
-    
+
 
     <H4>
         <A NAME="Reference">
             Reference
         </A>
     </H4>
-    <a href="https://pages.cs.wisc.edu/~amos/cs513.html">[1] Previous UW-Madision Course Link</a>
+    <p><a href="https://pages.cs.wisc.edu/~amos/cs513.html">[1] Previous UW-Madision Course Link</a></p>
+    <p><a href="form.html">Test Form</a></p>
 </body>
 </html>
