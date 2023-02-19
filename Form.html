@@ -20,6 +20,21 @@
                     <div class="mb-3">
                         <input name="email" type="email" class="form-control" placeholder="Email" required>
                     </div>
+                    <div class="mb-3">
+                        <fieldset>
+                            <legend>Select Foobar</legend>
+                            <label><input type="checkbox" name="foobar" id="foo" value="Foo">Foo</label>
+                            <label><input type="checkbox" name="foobar" id="bar" value="Bar">Bar</label>
+                            <label><input type="checkbox" name="foobar" id="baz" value="Baz">Baz</label>
+                        </fieldset>
+                    </div>
+                    <div class="mb-3">
+                        <fieldset>
+                            <legend>Choose Xyzzy</legend>
+                            <label><input type="radio" name="xyzzy" id="quux" value="Quux">Quux</label>
+                            <label><input type="radio" name="xyzzy" id="quuz" value="Quuz">Quuz</label>
+                        </fieldset>
+                    </div>
                     <button type="submit" class="btn btn-primary">Send</button>
                 </form>
             </div>
@@ -27,11 +42,18 @@
     </div>
     <!--<div class="position-absolute bottom-0 start-0">-->
     <div class="position-absolute bottom-0 start-50 translate-middle">
-        <p>Reference</p>
+        Reference:
+        <br>
         <a href="https://beproblemsolver.com/html-form-to-google-sheet/">Link Html form to Google Sheet</a>
+        <br>
+        <a href="https://github.com/levinunnink/html-form-to-google-sheet">Submit to Googel Sheet example on Github</a>
+        <br>
+        <a href="https://stackoverflow.com/questions/58079954/writing-html-form-radio-and-checkbox-button-selection-to-google-sheets">
+            Writing Html radio/checkbox selection to Google Sheets
+        </a>
     </div>  
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbz7p4cmhf00y6NWTdmJ7prCfX_UnpcIOuuGrgWH8ZpQtnYGH0YICd9LztPdKFCqLJkr/exec'
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwszfYND0fwNHYUEws2b11kXVwPrL76Yl4h_7YKeHzLI8z8Ufhlfsf38EyTmqH_37S1/exec'
         const form = document.forms['submit-to-google-sheet']
         form.addEventListener('submit', e => {
             e.preventDefault()
