@@ -1,6 +1,6 @@
 class CommonHeader extends HTMLElement {
     connectedCallback() {
-        this.innerHTML = ` <div class="container-fluid">
+        this.innerHTML = `<div class="container-fluid">
         <nav class="navbar navbar-expand-sm bg-info navbar-dark">
             <div class="container-fluid">
                 <ul class="navbar-nav">
@@ -14,7 +14,7 @@ class CommonHeader extends HTMLElement {
                         <a class="nav-link" href="CS.html">Computer Science</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Languages
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -28,7 +28,7 @@ class CommonHeader extends HTMLElement {
                         <a class="nav-link" href="Music.html">Music</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Health
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
